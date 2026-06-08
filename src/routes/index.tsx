@@ -1,8 +1,13 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Calendar, MapPin, ArrowRight, Sparkles, Brain, Truck, Users, Quote } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import auditorium from "@/assets/auditorium.jpg";
+import { AboutPage } from "./sobre";
+import { ProgramPage } from "./programa";
+import { PricingPage } from "./inscripciones";
+import { PastPage } from "./ediciones";
+import { ContactPage } from "./contacto";
 
 export const Route = createFileRoute("/")({
   head: () => ({
