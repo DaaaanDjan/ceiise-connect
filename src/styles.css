@@ -133,3 +133,6 @@
   50% { box-shadow: 0 0 50px oklch(0.50 0.30 305 / 0.7); }
 }
 .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+html { scroll-behavior: smooth; }
+
