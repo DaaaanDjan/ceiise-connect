@@ -4,11 +4,11 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Inicio" },
-  { to: "/sobre", label: "Sobre el Congreso" },
-  { to: "/programa", label: "Programa" },
-  { to: "/inscripciones", label: "Inscripciones" },
-  { to: "/ediciones", label: "Ediciones" },
-  { to: "/contacto", label: "Contacto" },
+  { to: "/#sobre", label: "Sobre el Congreso" },
+  { to: "/#programa", label: "Programa" },
+  { to: "/#inscripciones", label: "Inscripciones" },
+  { to: "/#ediciones", label: "Ediciones" },
+  { to: "/#contacto", label: "Contacto" },
 ];
 
 export function SiteLayout() {
@@ -43,30 +43,23 @@ export function SiteLayout() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => {
-              const active = pathname === item.to;
-              return (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className={`px-3 py-2 rounded-md text-sm transition-colors ${
-                    active
-                      ? "text-foreground bg-secondary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/60"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+            {navItems.map((item) => (
+              <a
+                key={item.to}
+                href={item.to}
+                className="px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
-          <Link
-            to="/inscripciones"
+          <a
+            href="/#inscripciones"
             className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-full gradient-brand text-primary-foreground text-sm font-medium glow hover:scale-105 transition-transform"
           >
             Inscríbete
-          </Link>
+          </a>
 
           <button
             className="lg:hidden p-2 rounded-md hover:bg-secondary"
@@ -81,20 +74,22 @@ export function SiteLayout() {
           <div className="lg:hidden glass-card border-t">
             <div className="px-6 py-4 flex flex-col gap-1">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.to}
-                  to={item.to}
+                  href={item.to}
+                  onClick={() => setOpen(false)}
                   className="px-3 py-2 rounded-md text-sm hover:bg-secondary"
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
-              <Link
-                to="/inscripciones"
+              <a
+                href="/#inscripciones"
+                onClick={() => setOpen(false)}
                 className="mt-2 text-center px-4 py-2 rounded-full gradient-brand text-primary-foreground text-sm font-medium"
               >
                 Inscríbete
-              </Link>
+              </a>
             </div>
           </div>
         )}
