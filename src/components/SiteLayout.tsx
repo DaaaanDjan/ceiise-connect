@@ -115,9 +115,9 @@ export function SiteLayout() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               {navItems.map((i) => (
                 <li key={i.to}>
-                  <Link to={i.to} className="hover:text-foreground transition-colors">
+                  <a href={i.to} className="hover:text-foreground transition-colors">
                     {i.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
