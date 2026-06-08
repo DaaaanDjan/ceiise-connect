@@ -86,12 +86,12 @@ function HomePage() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Link to="/inscripciones" className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-brand text-primary-foreground font-medium glow hover:scale-105 transition-transform animate-pulse-glow">
+              <a href="#inscripciones" className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-brand text-primary-foreground font-medium glow hover:scale-105 transition-transform animate-pulse-glow">
                 Inscríbete ahora <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/programa" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:bg-secondary transition-colors">
+              </a>
+              <a href="#programa" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:bg-secondary transition-colors">
                 Ver programa
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -205,12 +205,19 @@ function HomePage() {
             <p className="relative text-white/80 mb-8 max-w-2xl mx-auto">
               Cupos limitados. Tarifa Early Bird disponible hasta el 31 de enero.
             </p>
-            <Link to="/inscripciones" className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-primary font-semibold hover:scale-105 transition-transform">
+            <a href="#inscripciones" className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-primary font-semibold hover:scale-105 transition-transform">
               Inscríbete ahora <ArrowRight className="h-5 w-5" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
+
+      {/* Secciones embebidas */}
+      <div id="sobre" className="scroll-mt-20"><AboutPage /></div>
+      <div id="programa" className="scroll-mt-20"><ProgramPage /></div>
+      <div id="inscripciones" className="scroll-mt-20"><PricingPage /></div>
+      <div id="ediciones" className="scroll-mt-20"><PastPage /></div>
+      <div id="contacto" className="scroll-mt-20"><ContactPage /></div>
     </div>
   );
 }
