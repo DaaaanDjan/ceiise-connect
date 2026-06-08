@@ -25,7 +25,7 @@ const stats = [
 
 const gallery = [auditorium, speaker1, panel, networking, auditorium, panel];
 
-function PastPage() {
+export function PastPage() {
   return (
     <div>
       <section className="py-20">

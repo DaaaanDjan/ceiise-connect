@@ -52,7 +52,7 @@ const tiers = [
   },
 ];
 
-function PricingPage() {
+export function PricingPage() {
   return (
     <div>
       <section className="py-20">

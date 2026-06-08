@@ -59,7 +59,7 @@ const ponentes = [
   { name: "Dr. Roberto Salazar", role: "Tec de Monterrey · Industria 4.0", img: speaker1 },
 ];
 
-function ProgramPage() {
+export function ProgramPage() {
   return (
     <div>
       <section className="py-20">

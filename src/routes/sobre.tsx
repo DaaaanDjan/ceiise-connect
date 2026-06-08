@@ -14,7 +14,7 @@ export const Route = createFileRoute("/sobre")({
   component: AboutPage,
 });
 
-function AboutPage() {
+export function AboutPage() {
   return (
     <div>
       <section className="relative py-24">
