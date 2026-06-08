@@ -79,7 +79,7 @@ export function PastPage() {
           <h2 className="text-4xl font-bold mb-10 text-center">Galería</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {gallery.map((src, i) => (
-              <div key={i} className={`rounded-2xl overflow-hidden ${i % 5 === 0 ? "md:row-span-2 md:col-span-2" : ""}`}>
+              <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3]">
                 <img src={src} alt={`Galería ${i + 1}`} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             ))}
