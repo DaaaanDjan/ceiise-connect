@@ -64,59 +64,57 @@ function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card text-xs uppercase tracking-widest mb-6">
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              Edición 2026 · Inscripciones abiertas
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
-              <span className="gradient-text">CEIISE 2026</span>
-              <br />
-              <span className="text-foreground">Liderazgo, Innovación &amp; Logística Inteligente</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-xl mb-8">
-              Tres días para repensar la ingeniería industrial desde la innovación,
-              la inteligencia logística y el liderazgo de la nueva generación.
-            </p>
+      <div className="relative mx-auto max-w-5xl px-6 py-24 flex flex-col items-center text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card text-xs uppercase tracking-widest mb-6">
+          <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+          Edición 2026 · Inscripciones abiertas
+        </div>
+        <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
+          <span className="gradient-text">CEIISE 2026</span>
+          <br />
+          <span className="text-foreground">Liderazgo, Innovación &amp; Logística Inteligente</span>
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mb-8">
+          Tres días para repensar la ingeniería industrial desde la innovación,
+          la inteligencia logística y el liderazgo de la nueva generación.
+        </p>
 
-            <div className="flex flex-wrap gap-6 text-sm text-muted-foreground mb-8">
-              <span className="flex items-center gap-2"><Calendar className="h-4 w-4 text-primary" /> 18 — 20 Marzo 2026</span>
-              <span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Lima, Perú</span>
-            </div>
+        <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground mb-8">
+          <span className="flex items-center gap-2"><Calendar className="h-4 w-4 text-primary" /> 18 — 20 Marzo 2026</span>
+          <span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Lima, Perú</span>
+        </div>
 
-            <div className="flex flex-wrap gap-3">
-              <a href="#inscripciones" className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-brand text-primary-foreground font-medium glow hover:scale-105 transition-transform animate-pulse-glow">
-                Inscríbete ahora <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href="#programa" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:bg-secondary transition-colors">
-                Ver programa
-              </a>
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <a href="#inscripciones" className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-brand text-primary-foreground font-medium glow hover:scale-105 transition-transform animate-pulse-glow">
+            Inscríbete ahora <ArrowRight className="h-4 w-4" />
+          </a>
+          <a href="#programa" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:bg-secondary transition-colors">
+            Ver programa
+          </a>
+        </div>
 
-          {/* Countdown */}
-          <div className="glass-card rounded-2xl p-8">
-            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">El congreso inicia en</p>
-            <div className="grid grid-cols-4 gap-3">
-              {[
-                { v: days, l: "Días" },
-                { v: hours, l: "Horas" },
-                { v: minutes, l: "Min" },
-                { v: seconds, l: "Seg" },
-              ].map((b) => (
-                <div key={b.l} className="text-center">
-                  <div className="rounded-xl gradient-brand p-4 mb-2 glow">
-                    <span className="text-3xl md:text-4xl font-bold font-display tabular-nums">
-                      {String(b.v).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground">{b.l}</span>
+        {/* Countdown */}
+        <div className="glass-card rounded-2xl p-8 w-full max-w-lg">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">El congreso inicia en</p>
+          <div className="grid grid-cols-4 gap-3">
+            {[
+              { v: days, l: "Días" },
+              { v: hours, l: "Horas" },
+              { v: minutes, l: "Min" },
+              { v: seconds, l: "Seg" },
+            ].map((b) => (
+              <div key={b.l} className="text-center">
+                <div className="rounded-xl gradient-brand p-4 mb-2 glow">
+                  <span className="text-3xl md:text-4xl font-bold font-display tabular-nums">
+                    {String(b.v).padStart(2, "0")}
+                  </span>
                 </div>
-              ))}
-            </div>
+                <span className="text-xs uppercase tracking-wider text-muted-foreground">{b.l}</span>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
       </section>
 
       {/* ¿Qué es? */}
