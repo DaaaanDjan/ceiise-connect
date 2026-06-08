@@ -22,7 +22,7 @@ const faqs = [
   { q: "¿El congreso es presencial o híbrido?", a: "Es presencial en Lima, con transmisión en vivo de las conferencias magistrales para tarifa Premium." },
 ];
 
-function ContactPage() {
+export function ContactPage() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
