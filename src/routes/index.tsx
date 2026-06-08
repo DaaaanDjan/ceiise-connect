@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const EVENT_DATE = new Date("2026-03-18T09:00:00");
+const EVENT_DATE = new Date("2026-08-03T08:30:00");
 
 function useCountdown(target: Date) {
   const [now, setNow] = useState(() => Date.now());
